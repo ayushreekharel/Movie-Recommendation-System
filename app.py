@@ -2,7 +2,7 @@ import streamlit as st
 import pickle
 import pandas as pd
 
-def recommend(movie):
+def recommends(movie):
     movie_index=movies[movies['title']==movie].index[0]
     distances=similarity[movie_index]
     movies_list=sorted(list(enumerate(distances)),reverse=True,key=lambda x:x[1])[1:6]
@@ -24,7 +24,7 @@ st.title('Movie Recommender System')
 
 selected_movie_name=st.selectbox('Which Movie you want to see?',movies['title'].values)
 if st.button('Recommend'):
-    recommendations=recommend(selected_movie_name)
+    recommendations=recommends(selected_movie_name)
     for i in recommendations:
         st.write(i)
     
