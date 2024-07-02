@@ -1,4 +1,4 @@
-
+# Here I have used content based filtering.
 # Content-Based Recommender Systems
  These systems recommend items similar to those a user has shown interest in based on the content. For example, if a user likes action movies, the system will recommend other action movies. This requires creating tags and analyzing the content of items.
 
